@@ -1,0 +1,58 @@
+.ad {
+  padding-top: 45px;
+  padding-bottom: 140px;
+}
+
+.ad__list {
+  display: grid;
+  grid-template-rows: 480px repeat(2, 516px);
+}
+
+.ad__item {
+  background-repeat: no-repeat;
+}
+
+.ad__item1 {
+  background-image: url("../../img/main-laptop.jpeg");
+}
+
+.ad__item2 {
+  background-image: url("../../img/book.jpeg");
+}
+
+.ad__item3 {
+  background-image: url("../../img/watch.jpeg");
+}
+
+.ad__item4 {
+  background-image: url("../../img/shoe.jpeg");
+}
+
+.ad__item5 {
+  background-image: url("../../img/shoes.jpeg");
+}
+
+.ad__item6 {
+  background-image: url("../../img/gift.jpeg");
+}
+
+.ad__item7 {
+  background-image: url("../../img/laptop.jpeg");
+}
+
+.ad__item8 {
+  background-image: url("../../img/2022.jpeg");
+}
+
+.ad__item9 {
+  background-image: url("../../img/women.jpeg");
+}
+
+.ad__item10 {
+  background-image: url("../../img/clean.jpeg");
+}
+
+.ad__item11 {
+  background-image: url("../../img/balls.jpeg");
+}
+
