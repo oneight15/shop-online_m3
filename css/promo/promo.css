@@ -1,0 +1,125 @@
+.promo {
+  padding-top: 30px;
+  padding-bottom: 140px;
+}
+
+.promo__list {
+  display: grid;
+  grid-template-columns: repeat(3, 550px);
+  grid-template-rows: repeat(2, 516px);
+  gap: 60px;
+}
+
+.promo__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.promo__item_box_one {
+  display: grid;
+  grid-template-columns: 245px 245px;
+  grid-template-rows: 245px 228px;
+  gap: 43px 60px;
+}
+
+.promo__item_box_two {
+  grid-column: 2 span 2;
+}
+
+.promo__item_box_three {
+  grid-template-columns: 1fr;
+  grid-template-rows: 228px;
+  gap: 60px;
+}
+
+.promo__item_box_four {
+  grid-column: 1 / 3;
+}
+
+.promo__item_box_five {
+  grid-template-columns: 245px 245px;
+  grid-template-rows: 245px 245px;
+  gap: 26px 60px;
+}
+
+
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.card_number_one {
+  background-image: url(../../img/book.jpeg);
+  background-position: -40px;
+}
+
+.card_number_two {
+  background-image: url(../../img/watch.jpeg);
+  background-position: -60px;
+}
+
+.card_number_three {
+  background-image: url(../../img/shoe.jpeg);
+  background-position: 0 -90px;
+  grid-column: 1 / 3;
+  padding: 20px;
+}
+
+.card_number_four {
+  min-width: 516px;
+  justify-self: end;
+  background-image: url(../../img/shoes.jpeg);
+  grid-column: 1 / 3;
+  background-size: cover;
+  background-size: 110%;
+  background-position: -5px -100px;
+}
+
+.card_number_five {
+  background-image: url(../../img/gift.jpeg);
+  background-position: 0 -90px;
+}
+
+.card_number_six {
+  background-image: url(../../img/laptop.jpeg);
+  background-position: 0 -77px;
+}
+
+.card_number_seven {
+  background-image: url(../../img/year-2022.jpeg);
+  background-position: 0 -210px;
+  grid-column: 1 / 3;
+}
+
+.card_number_eight {
+  background-image: url(../../img/women.jpeg);
+  background-position: -85px;
+  grid-row: 1 / 3;
+}
+
+.card_number_nine {
+  background-image: url(../../img/clean.jpeg);
+  background-position: -90px;
+}
+
+.card_number_ten {
+  background-image: url(../../img/balls.jpeg);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  background-size: 200%;
+}
+
+.card__discount {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 88px;
+  height: 88px;
+  background-color: #FFBD13;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.3;
+  border-radius: 50%;
+  padding: 24px 0 25px;
+}
