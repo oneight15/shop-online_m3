@@ -75,7 +75,7 @@
 }
 
 .card_number_four {
-  min-width: 516px;
+  max-width: 516px;
   justify-self: end;
   background-image: url(../../img/shoes.jpeg);
   grid-column: 1 / 3;

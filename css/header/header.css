@@ -26,8 +26,7 @@
   background-color: #3670C7;
   border-radius: 10px;
   font-size: 22px;
-  line-height: 150%;
-  color: #FFFFFF;
+  line-height: 1.5;
   min-width: 151px;
   padding: 9px 28px 12px;
 }
@@ -41,24 +40,38 @@
   background-image: url("../../img/sort.svg");
 }
 
-.form__label {
-  display: block;
+.form {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 5fr 2fr;
   background-color: #EFEFEF;
   border-radius: 30px;
-  padding: 15px 40px 18px;
+}
+
+.form__label {
+  grid-column: 1 / 7;
+  display: block;
 }
 
 .form__search {
-  display: inline-block;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 130%;
+  font-weight: 700;
+  display: inline-block;
   color: #8F8F8F;
   width: 100%;
+  padding: 15px 40px 18px;
 }
 
 .form__btn {
-  display: none;
+  display: block;
+  grid-column: 7 / 8;
+  min-width: 101px;
+  height: 54px;
+  background-color: #3670C7;
+  border-radius: 30px;
+  background-image: url("../../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .icons {
@@ -71,12 +84,12 @@
 .icons__link {
   font-weight: 700;
   font-size: 16px;
-  line-height: 130%;
   color: #2D2D2D;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
+  gap: 4px;
 }
 
 .icons__link_type_profile::before {
