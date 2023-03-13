@@ -41,3 +41,24 @@
   font-size: 32px;
   line-height: 130%;
 }
+
+.timer__number {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    padding-top: 30px;
+    padding-bottom: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 320px) {
+  
+}

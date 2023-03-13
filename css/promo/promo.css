@@ -5,14 +5,14 @@
 
 .promo__list {
   display: grid;
-  grid-template-columns: repeat(3, 550px);
+  grid-template-columns: repeat(3, minmax(450px, 550px));
   grid-template-rows: repeat(2, 516px);
   gap: 60px;
 }
 
 .promo__item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
 }
 
 .promo__item_box_one {
@@ -52,11 +52,19 @@
 .card_number_one {
   background-image: url(../../img/book.jpeg);
   background-position: -40px;
+  padding: 90px 35px 27px 20px;
+  font-size: 30px;
+  line-height: 130%;
 }
 
 .card_number_two {
   background-image: url(../../img/watch.jpeg);
   background-position: -60px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  padding: 77px 25px 129px 14px;
+  white-space: nowrap;
 }
 
 .card_number_three {
@@ -74,6 +82,18 @@
   background-size: cover;
   background-size: 110%;
   background-position: -5px -100px;
+  padding: 20px;
+  padding-top: 329px;
+}
+
+.card_number_four .card__text {
+  display: inline-block;
+  padding: 24px 21px;
+  background-color: #38C0EB;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
 }
 
 .card_number_five {
@@ -109,8 +129,13 @@
   background-size: 200%;
 }
 
+.card__text_weight_bold {
+  font-size: 40px;
+  font-weight: 700;
+}
+
 .card__discount {
-  display: inline-block;
+  display: block;
   text-align: center;
   vertical-align: middle;
   width: 88px;
@@ -122,4 +147,71 @@
   line-height: 1.3;
   border-radius: 50%;
   padding: 24px 0 25px;
+}
+
+@media (max-width: 1024px) {
+  .promo {
+    padding-top: 11px;
+    padding-bottom: 100px;
+  }
+
+  .promo__list {
+    grid-template-columns: 464px 446px;
+    grid-template-rows: 446px 410px;
+    grid-auto-rows: 450px;
+    gap: 22px 30px;
+  }
+
+  .promo__item_box_one {
+    grid-template-columns: 202px 202px;
+    grid-template-rows: 202px 220px;
+    gap: 24px 60px;
+  }
+  
+  .promo__item_box_two {
+    grid-column: 2 / 3;
+  }
+  
+  .promo__item_box_three {
+    grid-template-columns: 1fr;
+    grid-template-rows: 194px;
+    gap: 22px;
+  }
+  
+  .promo__item_box_four {
+    grid-column: 1 / 3;
+  }
+  
+  .promo__item_box_five {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-columns: 206px 196px;
+    grid-template-rows: 196px 196px;
+    gap: 18px 44px;
+  }
+
+  .card_number_four {
+    min-width: 100%;
+    padding-top: 15px;
+    justify-self: stretch;
+  }
+
+  .card_number_four .card__text {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .card_number_seven {
+    min-height: 418px;
+    align-self: end;
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 320px) {
+  
 }
