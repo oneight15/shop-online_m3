@@ -6,6 +6,7 @@
 .header__container {
   display: grid;
   grid-template-columns: 2fr 3fr 7fr 4fr;
+  gap: 10px;
   align-items: center;
 }
 
@@ -56,7 +57,7 @@
 .form__search {
   font-size: 16px;
   font-weight: 700;
-  display: inline-block;
+  display: block;
   color: #8F8F8F;
   width: 100%;
   padding: 15px 40px 18px;
