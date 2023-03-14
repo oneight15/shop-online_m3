@@ -4,8 +4,8 @@
 }
 
 .banner__container {
-  padding-top: 145px;
-  padding-bottom: 40px;
+  padding-top: 152px;
+  padding-bottom: 35px;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/main-laptop.jpeg");
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@
 .banner__title {
   font-weight: 700;
   font-size: 70px;
-  margin-bottom: 100px;
+  margin-bottom: 72px;
   padding-left: 112px;
 }
 
@@ -42,10 +42,34 @@
   font-size: 60px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
   .banner {
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 11px;
+  }
+
+  .banner__container {
+    padding-top: 80px;
+    padding-bottom: 35px;
+  }
+
+  .banner__title {
+    font-size: 40px;
+    margin-bottom: 40px;
+    padding-left: 80px;
+  }
+
+  .timer {
+    max-width: 314px;
+  }
+
+  .timer__counter {
+    gap: 23px;
+    font-size: 20px;
+  }
+
+  .timer__number {
+    font-size: 40px;
   }
 }
 

@@ -5,14 +5,13 @@
 
 .promo__list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(450px, 550px));
-  grid-template-rows: repeat(2, 516px);
+  grid-template-columns: repeat(3, minmax(400px, 550px));
+  grid-template-rows: repeat(2, 1fr);
   gap: 60px;
 }
 
 .promo__item {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
 }
 
 .card {
@@ -43,7 +42,7 @@
 
 .promo__item_box_one {
   display: grid;
-  grid-template-columns: 245px 245px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 245px 228px;
   gap: 43px 60px;
 }
@@ -54,7 +53,7 @@
 
 .promo__item_box_three {
   grid-template-columns: 1fr;
-  grid-template-rows: 228px;
+  grid-template-rows: 1fr 1fr;
   gap: 60px;
 }
 
@@ -63,7 +62,7 @@
 }
 
 .promo__item_box_five {
-  grid-template-columns: 245px 245px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 245px 245px;
   gap: 26px 60px;
 }
@@ -71,29 +70,27 @@
 .card_number_one {
   align-items: end;
   background-image: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%), url(../../img/book.jpeg);
-  /* background-position: -40px; */
   background-position: 50%;
   padding: 27px 20px;
   font-size: 30px;
 }
 
 .card_number_two {
-  gap: 14px;
+  flex-direction: column;
+  gap: 10px;
   justify-content: end;
+  align-items: end;
   background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../../img/watch.jpeg);
-  /* background-position: -60px; */
   background-position: 50%;
   font-weight: 700;
   font-size: 30px;
   line-height: 130%;
-  padding: 77px 20px 27px 14px;
-  white-space: nowrap;
+  padding: 27px 20px 27px 14px;
+  /* white-space: nowrap; */
 }
 
 .card_number_three {
-  align-items: end;
   background-image: linear-gradient(180.99deg, rgba(0, 0, 0, 0) 8.18%, rgba(0, 0, 0, 0.2) 99.15%), url(../../img/shoe.jpeg);
-  /* background-position: 0 -90px; */
   background-position-y: 65%;
   grid-column: 1 / 3;
   padding: 20px;
@@ -106,7 +103,6 @@
   grid-column: 1 / 3;
   background-size: cover;
   background-size: 110%;
-  /* background-position: -5px -100px; */
   background-position: 10% 50%;
   padding: 20px;
 }
@@ -114,24 +110,21 @@
 .card_number_five {
   align-items: end;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.46%, rgba(0, 0, 0, 0.2) 100%), url(../../img/gift.jpeg);
-  /* background-position: 0 -90px; */
   background-position-y: 65%;
   padding: 30px;
 }
 
 .card_number_six {
   align-items: end;
-  gap: 39px;
+  justify-content: space-between;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.28%, rgba(0, 0, 0, 0.2) 100%), url(../../img/laptop.jpeg);
-  /* background-position: 0 -77px; */
   background-position-y: 55%;
-  padding: 20px 20px 20px 30px;
+  padding: 30px 20px 20px 30px;
 }
 
 .card_number_seven {
   align-items: end;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url(../../img/year-2022.jpeg);
-  /* background-position: 0 -210px; */
   background-position-y: 60%;
   grid-column: 1 / 3;
   padding: 50px;
@@ -141,15 +134,14 @@
   justify-content: end;
   align-items: end;
   background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../../img/women.jpeg);
-  /* background-position: -85px; */
   background-position: 50%;
   grid-row: 1 / 3;
   padding: 20px;
 }
 
 .card_number_nine {
+  gap: 10px;
   background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../../img/clean.jpeg);
-  /* background-position: -90px; */
   background-position-x: 75%;
   font-weight: 700;
   font-size: 30px;
@@ -163,12 +155,6 @@
   background-position-y: 90%;
 }
 
-
-
-.card_number_two .card__discount {
-
-}
-
 .card_number_four .card__text {
   margin-top: auto;
   padding: 24px 21px;
@@ -177,7 +163,18 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 120%;
+}
 
+.card_number_seven .card__text {
+  margin-top: auto;
+  padding: 30px 40px;
+  background-color: #ffffff;
+  color: #F91155;;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
 }
 
 .card__text_weight_bold {
@@ -185,7 +182,17 @@
   font-weight: 700;
 }
 
-@media (max-width: 1024px) {
+.card__text_size_big {
+  font-size: 56px;
+  line-height: calc(67.2 / 56);
+  font-weight: 700;
+}
+
+.card__text_position_baseline {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 1500px) {
   .promo {
     padding-top: 11px;
     padding-bottom: 100px;
