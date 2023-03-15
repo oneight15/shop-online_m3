@@ -140,7 +140,7 @@
 }
 
 .card_number_nine {
-  gap: 10px;
+  align-content: space-between;
   background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../../img/clean.jpeg);
   background-position-x: 75%;
   font-weight: 700;
@@ -155,7 +155,7 @@
   background-position-y: 90%;
 }
 
-.card_number_four .card__text {
+.card__text_bg_blue {
   margin-top: auto;
   padding: 24px 21px;
   background-color: #38C0EB;
@@ -165,7 +165,7 @@
   line-height: 120%;
 }
 
-.card_number_seven .card__text {
+.card__text_color_red {
   margin-top: auto;
   padding: 30px 40px;
   background-color: #ffffff;
@@ -199,14 +199,14 @@
   }
 
   .promo__list {
-    grid-template-columns: 464px 446px;
+    grid-template-columns: minmax(300px, 464px) minmax(300px, 446px);
     grid-template-rows: 446px 410px;
     grid-auto-rows: 450px;
     gap: 22px 30px;
   }
 
   .promo__item_box_one {
-    grid-template-columns: 202px 202px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 202px 220px;
     gap: 24px 60px;
   }
@@ -228,33 +228,208 @@
   .promo__item_box_five {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    grid-template-columns: 206px 196px;
+    grid-template-columns: minmax(150px, 206px) minmax(140px, 196px);
     grid-template-rows: 196px 196px;
     gap: 18px 44px;
   }
 
+  .card_number_one {
+    background-position: 50%;
+    padding: 28px 3px 28px 9px;
+    font-size: 24px;
+  }
+
+  .card_number_two {
+    padding: 10px 10px 10px 9px;
+    font-size: 24px;
+    gap: 14px;
+  }
+
+  .card_number_three {
+    padding: 17px 10px;
+    background-position-y: 65%;
+  }
+
   .card_number_four {
     min-width: 100%;
-    padding-top: 15px;
     justify-self: stretch;
   }
 
-  .card_number_four .card__text {
-    font-weight: 400;
+  .card_number_five {
     font-size: 30px;
-    line-height: 120%;
+    padding: 27px 60px 27px 30px;
+  }
+
+  .card_number_six {
+    padding: 10px;
+    padding-left: 30px;
   }
 
   .card_number_seven {
     min-height: 418px;
     align-self: end;
+    padding: 39px 30px;
+  }
+
+  .card_number_eight {
+    padding: 10px 23px;
+  }
+
+  .card_number_nine {
+    padding: 10px 2px 19px 4px;
+    font-size: 20px;
+  }
+
+  .card__text_bg_blue {
+    margin-top: auto;
+    padding: 24px 27px 32px 25px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .card__text_color_red {
+    margin-top: auto;
+    padding: 24px 47px;
+    font-size: 30px;
+  }
+
+  .card__text_weight_bold {
+    font-size: 30px;
+    line-height: calc(39 / 30);
+  }
+
+  .card__text_size_big {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .card__text_position_baseline {
+    font-size: 30px;
+    padding-bottom: 25px;
   }
 }
 
-@media (max-width: 768px) {
+
+/* ------------------------ */
+
+
+@media (max-width: 910px) {
+  .promo {
+    padding-top: 18px;
+    padding-bottom: 100px;
+  }
+
+  .promo__list {
+    grid-template-columns: minmax(180px, 300px) minmax(200px, 380px);
+    grid-template-rows: 1fr;
+    gap: 20px 22px;
+  }
+
+  .card__discount {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 15px 0;
+  }
+
+  .promo__item_box_one {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 130px 126px;
+    gap: 22px 40px;
+  }
   
+  .promo__item_box_two {
+    grid-column: 2 / 3;
+  }
+  
+  .promo__item_box_three {
+    grid-template-columns: 1fr;
+    grid-template-rows: 126px 126px;
+    gap: 22px;
+  }
+  
+  .promo__item_box_four {
+    grid-column: 1 / 3;
+  }
+  
+  .promo__item_box_five {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-columns: minmax(150px, 206px) minmax(140px, 196px);
+    grid-template-rows: 196px 196px;
+    gap: 18px 44px;
+  }
+
+
+  .card_number_one {
+
+  }
+  .card_number_two {
+
+  }
+  .card_number_three {
+    padding: 10px;
+  }
+  .card_number_four {
+
+  }
+  .card_number_five {
+
+  }
+  .card_number_six {
+
+  }
+  .card_number_seven {
+
+  }
+  .card_number_eight {
+
+  }
+  .card_number_nine {
+
+  }
+  .card_number_ten {
+
+  }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 @media (max-width: 320px) {
   
-}
+
+
+
+  .card_number_one
+  .card_number_two
+  .card_number_three
+  .card_number_four
+  .card_number_five
+  .card_number_six
+  .card_number_seven
+  .card_number_eight
+  .card_number_nine
+  .card_number_ten
+} */
