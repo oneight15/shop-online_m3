@@ -204,8 +204,30 @@
 
 
 
-/* @media (max-width: 320px) {
+@media (max-width: 630px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   
-} */
+  .header__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "logo ."
+    "nav icons"
+    "search search";
+  }
+
+  .header__logo {
+    width: 114px;
+    height: 25px;
+  }
+
+  /* .icons__text {
+    display: none;
+  } */
+} 
 
 

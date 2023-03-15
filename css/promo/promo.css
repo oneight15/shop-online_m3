@@ -313,6 +313,11 @@
 /* ------------------------ */
 
 
+
+
+
+
+
 @media (max-width: 910px) {
   .promo {
     padding-top: 18px;
@@ -321,8 +326,9 @@
 
   .promo__list {
     grid-template-columns: minmax(180px, 300px) minmax(200px, 380px);
-    grid-template-rows: 1fr;
-    gap: 20px 22px;
+    grid-template-rows: 278px 274px 337px;
+    gap: 22px 20px;
+    grid-auto-flow: row dense;
   }
 
   .card__discount {
@@ -338,58 +344,101 @@
     gap: 22px 40px;
   }
   
-  .promo__item_box_two {
-    grid-column: 2 / 3;
-  }
-  
   .promo__item_box_three {
     grid-template-columns: 1fr;
     grid-template-rows: 126px 126px;
     gap: 22px;
   }
   
-  .promo__item_box_four {
-    grid-column: 1 / 3;
-  }
-  
   .promo__item_box_five {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    grid-template-columns: minmax(150px, 206px) minmax(140px, 196px);
-    grid-template-rows: 196px 196px;
-    gap: 18px 44px;
+    align-content: end;
+    grid-template-columns: minmax(150px, 253px) minmax(60px, 82px);
+    grid-template-rows: 83px 83px;
+    gap: 8px 21px;
   }
 
+  .card {
+    border-radius: 12px;
+  }
 
   .card_number_one {
-
+    font-size: 20px;
+    line-height: 1.1;
+    padding: 15px 3px 15px 10px;
   }
   .card_number_two {
-
+    font-size: 16px;
+    padding: 17px 10px 10px 5px;
+    gap: 0;
+    justify-content: space-between;
   }
   .card_number_three {
     padding: 10px;
   }
   .card_number_four {
-
+    min-height: 380px;
+    padding: 10px;
   }
   .card_number_five {
-
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 18px 80px 18px 21px;
   }
   .card_number_six {
-
+    padding-left: 21px;
   }
   .card_number_seven {
-
+    min-height: 100%;
+    padding: 26px;
+    background-position-y: 70%;
   }
   .card_number_eight {
-
+    padding: 10px;
+    background-position-y: 5%;
   }
   .card_number_nine {
-
+    padding: 3px;
+    padding-bottom: 11px;
+    font-size: 12px;
+    line-height: 1.2;
+    background-position-x: 50%;
   }
-  .card_number_ten {
 
+  .card__text_bg_blue {
+    padding: 14px 30px 18px 24px;
+    font-size: 16px;
+    line-height: 1.1;
+    border-radius: 12px;
+  }
+
+  .card__text_color_red {
+    padding: 22px 34px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+
+  .card__text_weight_bold {
+    font-size: 26px;
+    line-height: inherit;
+  }
+
+  .card__text_size_big {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .card__text_position_baseline {
+    font-size: 16px;
+    line-height: 1.2;
+    padding-bottom: 8px;
+  }
+
+  .card__discount_size_small {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    padding: 9px 0 11px;
   }
 }
 
@@ -416,8 +465,8 @@
 
 
 
-/*
-@media (max-width: 320px) {
+
+@media (max-width: 630px) {
   
 
 
@@ -432,4 +481,4 @@
   .card_number_eight
   .card_number_nine
   .card_number_ten
-} */
+}

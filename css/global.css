@@ -99,9 +99,9 @@ iframe {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 630px) {
   .container {
-    max-width: 280px;
+    max-width: 320px;
     padding: 0 20px;
   }
 }
