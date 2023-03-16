@@ -28,7 +28,7 @@
 }
 
 .timer__text {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   margin-bottom: 5px;
 }
@@ -50,8 +50,9 @@
   }
 
   .banner__container {
-    padding-top: 80px;
+    padding-top: 83px;
     padding-bottom: 35px;
+    border-radius: 16px;
   }
 
   .banner__title {
@@ -139,5 +140,38 @@
 
 
 @media (max-width: 630px) {
-  
+  .banner {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+
+  .banner__container {
+    padding-top: 52px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .banner__title {
+    font-size: 22px;
+    margin-bottom: 189px;
+    padding-left: 0;
+  }
+
+  .timer {
+    max-width: 167px;
+  }
+
+  .timer__text {
+    font-size: 8px;
+    margin-bottom: 4px;
+  }
+
+  .timer__counter {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .timer__number {
+    font-size: 20px;
+  }
 }
