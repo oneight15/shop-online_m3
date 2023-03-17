@@ -86,7 +86,6 @@
   font-size: 30px;
   line-height: 130%;
   padding: 27px 20px 27px 14px;
-  /* white-space: nowrap; */
 }
 
 .card_number_three {
@@ -192,6 +191,8 @@
 .card__text_position_baseline {
   padding-bottom: 15px;
 }
+
+/* ---------- media для max-width: 1500px ---------- */
 
 @media (max-width: 1500px) {
   .promo {
@@ -314,14 +315,7 @@
   }
 }
 
-
-/* ------------------------ */
-
-
-
-
-
-
+/* ---------- media для max-width: 910px ---------- */
 
 @media (max-width: 910px) {
   .promo {
@@ -371,37 +365,45 @@
     line-height: 1.1;
     padding: 15px 3px 15px 10px;
   }
+
   .card_number_two {
     font-size: 16px;
     padding: 17px 10px 10px 5px;
     gap: 0;
     justify-content: space-between;
   }
+
   .card_number_three {
     padding: 10px;
   }
+
   .card_number_four {
     min-height: 380px;
     padding: 10px;
   }
+
   .card_number_five {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 700;
     padding: 18px 80px 18px 21px;
   }
+
   .card_number_six {
     padding-left: 21px;
   }
+
   .card_number_seven {
     min-height: 100%;
     padding: 26px;
     background-position-y: 70%;
   }
+
   .card_number_eight {
     padding: 10px;
     background-position-y: 5%;
   }
+
   .card_number_nine {
     padding: 3px;
     padding-bottom: 11px;
@@ -447,117 +449,135 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ---------- media для max-width: 630px ---------- */
 
 @media (max-width: 630px) {
   .promo {
-    padding-top: 18px;
+    padding-top: 10px;
     padding-bottom: 100px;
   }
 
   .promo__list {
-    grid-template-columns: 280px;
+    grid-template-columns: 1fr;
     grid-template-rows: 268px 280px 254px 280px 123px;
     row-gap: 20px;
     grid-auto-flow: row;
-  }
-
-  .card__discount {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-    padding: 15px 0;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "five"
+    "four";
   }
 
   .promo__item_box_one {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 130px 118px;
     gap: 20px;
+    grid-area: one;
   }
 
   .promo__item_box_two {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    grid-area: two;
   }
   
   .promo__item_box_three {
     grid-template-columns: 1fr;
     grid-template-rows: 118px 118px;
     gap: 20px;
+    grid-area: three;
+  }
+
+  .promo__item_box_four {
+    grid-area: four;
   }
   
   .promo__item_box_five {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    grid-area: five;
   }
 
   .card {
-    border-radius: 12px;
+    border-radius: 8px;
   }
 
-
-
   .card_number_one {
-    width: 50px;
+    font-size: 12px;
+    padding: 10px;
+    padding-right: 40px;
   }
 
   .card_number_two {
-    width: 50px;
+    font-size: 12px;
+    padding: 28px 5px 5px 10px;
+    gap: 0;
+    justify-content: space-between;
   }
 
   .card_number_three {
-    width: 50px;
+    padding: 5px;
   }
 
   .card_number_four {
-    width: 50px;
+    min-height: 100%;
+    background-position-x: 50%;
+    background-position-y: 40%;
   }
 
   .card_number_five {
-    width: 50px;
+    font-size: 12px;
+    padding: 16px 10px;
   }
 
   .card_number_six {
-    width: 50px;
+    padding: 10px 5px 5px 10px;
   }
 
   .card_number_seven {
-    width: 50px;
-  }
-
-  .card_number_eight {
-    width: 50px;
+    padding: 10px 15px;
+    background-position-y: 65%;
   }
 
   .card_number_nine {
-    width: 50px;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-position-x: 50%;
   }
 
-  .card_number_ten {
-    width: 50px;
+  .card__text_bg_blue {
+    padding: 7px 25px 11px;
+    font-size: 12px;
+    border-radius: 8px;
   }
 
+  .card__text_color_red {
+    padding: 7px 41px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .card__text_weight_bold {
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .card__text_size_big {
+    font-size: 16px;
+  }
+
+  .card__text_position_baseline {
+    font-size: 12px;
+    padding-bottom: 12px;
+  }
+
+  .card__discount_size_small {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 15px 0;
+  }
 }

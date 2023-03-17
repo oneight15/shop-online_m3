@@ -20,23 +20,22 @@
       </nav>
 
       <form class="header__form form" action="#">
-        <label class="form__label" for="">
-          <input class="form__search" type="search" placeholder="Я ищу...">
+        <label class="form__label" for="search">
+          <input class="form__search" type="search" name="search" placeholder="Я ищу..." id="search">
         </label>  
         <button class="form__btn" type="submit"></button>
       </form>
 
       <div class="header__icons icons">
         <a class="icons__link icons__link_type_profile" href="#">
-          <!-- <svg class="icons__image" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" class="icons__image"><g clip-path="url(#a)"><path fill="#2D2D2D" d="M18 18c3.315 0 6-2.685 6-6s-2.685-6-6-6-6 2.685-6 6 2.685 6 6 6Zm0 3c-4.005 0-12 2.01-12 6v3h24v-3c0-3.99-7.995-6-12-6Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg> -->
           <span class="icons__text">Профиль</span>
         </a>
+
         <a class="icons__link icons__link_type_basket" href="#">
-          <!-- <svg class="icons__image" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" class="icons__image"><g clip-path="url(#a)"><path fill="#2D2D2D" d="M10.5 27a2.996 2.996 0 0 0-2.985 3c0 1.65 1.335 3 2.985 3s3-1.35 3-3-1.35-3-3-3Zm-9-24v3h3l5.4 11.385-2.025 3.675A2.9 2.9 0 0 0 7.5 22.5c0 1.65 1.35 3 3 3h18v-3H11.13a.371.371 0 0 1-.375-.375l.045-.18 1.35-2.445h11.175a2.986 2.986 0 0 0 2.625-1.545l5.37-9.735c.12-.21.18-.465.18-.72 0-.825-.675-1.5-1.5-1.5H7.815l-1.41-3H1.5Zm24 24a2.996 2.996 0 0 0-2.985 3c0 1.65 1.335 3 2.985 3s3-1.35 3-3-1.35-3-3-3Z"/><circle cx="29" cy="7" r="7" fill="#fff"/><path fill="#3670C7" d="M31.867 10.39c.187 0 .334.054.441.161.112.103.168.24.168.413V12h-6.944v-.574a.974.974 0 0 1 .308-.714l3.073-3.08c.257-.261.485-.511.686-.749a4.7 4.7 0 0 0 .511-.707c.135-.233.238-.469.308-.707.075-.243.112-.497.112-.763a1.77 1.77 0 0 0-.105-.637 1.25 1.25 0 0 0-.301-.469 1.161 1.161 0 0 0-.462-.28 1.733 1.733 0 0 0-.602-.098c-.205 0-.397.03-.574.091a1.461 1.461 0 0 0-.462.245c-.135.103-.25.224-.343.364a1.6 1.6 0 0 0-.21.462c-.08.215-.182.357-.308.427s-.308.086-.546.049l-.91-.161c.07-.485.205-.91.406-1.274.2-.369.45-.674.749-.917a3.078 3.078 0 0 1 1.036-.553 4.094 4.094 0 0 1 1.26-.189c.467 0 .894.07 1.281.21.387.135.719.329.994.581.275.252.49.555.644.91.154.355.231.749.231 1.183 0 .373-.056.719-.168 1.036a4.09 4.09 0 0 1-.441.91c-.182.29-.397.57-.644.84s-.506.546-.777.826l-2.282 2.331c.22-.065.436-.114.651-.147.22-.037.427-.056.623-.056h2.597Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg> -->
           <span class="icons__text">Корзина</span>
         </a>
+
         <a class="icons__link icons__link_type_favorite" href="#">
-          <!-- <svg class="icons__image" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" class="icons__image"><g clip-path="url(#a)"><path fill="#2D2D2D" d="m18 32.025-2.175-1.98C8.1 23.04 3 18.42 3 12.75 3 8.13 6.63 4.5 11.25 4.5c2.61 0 5.115 1.215 6.75 3.135 1.635-1.92 4.14-3.135 6.75-3.135 4.62 0 8.25 3.63 8.25 8.25 0 5.67-5.1 10.29-12.825 17.31L18 32.025Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg> -->
           <span class="icons__text">Избранное</span>
         </a>
       </div>
@@ -56,9 +55,11 @@
               <p class="timer__days">
                 <span class="timer__number">3</span>&nbsp;дня
               </p>
+
               <p class="timer__hours">
                 <span class="timer__number">8</span>&nbsp;часов
               </p>
+
               <p class="timer__minutes">
                 <span class="timer__number">43</span>&nbsp;минуты
               </p>
@@ -75,10 +76,12 @@
             <a class="card card_number_one" href="#">
               <span class="card__text"><span class="card__text_weight_bold">Книга</span> – лучший подарок</span>
             </a>
+
             <a class="card card_number_two" href="#">
               <span class="card__text">Время скидок!</span>
               <span class="card__discount">-25%</span>
             </a>
+
             <a class="card card_number_three" href="#">
               <span class="card__discount">-40%</span>
             </a>
@@ -94,6 +97,7 @@
             <a class="card card_number_five" href="#">
               <span class="card__text">Идеи новогодних подарков</span>
             </a>
+
             <a class="card card_number_six" href="#">
               <span class="card__text card__text_position_baseline">Выгодно в декабре!</span>
               <span class="card__discount">-15%</span>
@@ -110,13 +114,14 @@
             <a class="card card_number_eight" href="#">
               <span class="card__discount">-55%</span>
             </a>
+
             <a class="card card_number_nine" href="#">
               <span class="card__discount card__discount_size_small">-25%</span>
               <span class="card__text">На бытовую химию</span>
             </a>
+
             <a class="card card_number_ten" href="#">
             </a>
-
           </li>
         </ul>
       </div>

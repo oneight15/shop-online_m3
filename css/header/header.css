@@ -13,6 +13,7 @@
 .header__link-logo {
   width: 190px;
   height: 41px;
+  align-self: end;
 }
 
 .header__logo {
@@ -106,6 +107,8 @@
   background-image: url("../../img/favorite.svg");
 }
 
+/* ---------- media для max-width: 1500px ---------- */
+
 @media (max-width: 1500px) {
   .header {
     padding-top: 34px;
@@ -140,14 +143,7 @@
   }
 }
 
-
-
-
-
-
-/* ------------------------ */
-
-
+/* ---------- media для max-width: 910px ---------- */
 
 @media (max-width: 910px) {
   .header {
@@ -199,21 +195,11 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* ---------- media для max-width: 630px ---------- */
 
 @media (max-width: 630px) {
   .header {
-    padding-top: 20px;
+    padding-top: 13px;
     padding-bottom: 15px;
   }
   
