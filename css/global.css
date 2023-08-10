@@ -2,7 +2,7 @@
   font-family: Lato;
   src: local("Lato Regular"), local("Lato-Regular"), url('../fonts/lato-regular.woff2') format('woff2'), 
     url('../fonts/lato-regular.woff') format('woff');
-  font-weight: 400; 
+  font-weight: 400;
   font-display: swap;
 }
 
