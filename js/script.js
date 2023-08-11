@@ -1,5 +1,10 @@
 'use strict';
 
+const declensionNum = (num, words) => {
+  return words[(num % 100 > 4 && num % 100 < 20) ?
+    2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+};
+
 const timer = deadline => {
   const timerBlockHour = document.querySelector('.timer__number_hour');
   const timerBlockMin = document.querySelector('.timer__number_min');
@@ -24,24 +29,24 @@ const timer = deadline => {
   const start = () => {
     const timer = getTimeRemaning();
 
-    timerBlockDay.textContent = timer.day;
+    timerBlockDay.textContent = timer.day + declensionNum(timer.day, ['день', 'дня', 'дней']);
 
     if (timer.hours < 10) {
-      timerBlockHour.innerHTML = '0' + timer.hours;
+      timerBlockHour.innerHTML = '0' + timer.hours + declensionNum(timer.hours, ['час', 'часа', 'часов']);
     } else {
-      timerBlockHour.textContent = timer.hours;
+      timerBlockHour.textContent = timer.hours + declensionNum(timer.hours, ['час', 'часа', 'часов']);
     }
 
     if (timer.minutes < 10) {
-      timerBlockMin.innerHTML = '0' + timer.minutes;
+      timerBlockMin.innerHTML = '0' + timer.minutes + declensionNum(timer.minutes, ['минута', 'минуты', 'минут']);
     } else {
-      timerBlockMin.textContent = timer.minutes;
+      timerBlockMin.textContent = timer.minutes + declensionNum(timer.minutes, ['минута', 'минуты', 'минут']);
     }
 
     if (timer.seconds < 10) {
-      timerBlockSec.innerHTML = '0' + timer.seconds;
+      timerBlockSec.innerHTML = '0' + timer.seconds + declensionNum(timer.seconds, ['секунда', 'секунды', 'секунд']);
     } else {
-      timerBlockSec.textContent = timer.seconds;
+      timerBlockSec.textContent = timer.seconds + declensionNum(timer.seconds, ['секунда', 'секунды', 'секунд']);
     }
 
     const interbalId = setTimeout(start, 1000);
@@ -53,6 +58,8 @@ const timer = deadline => {
       timerBlockMin.textContent = '00';
       timerBlockSec.textContent = '00';
     }
+
+    timer.remove();
   };
 
   start();
