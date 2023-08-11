@@ -25,15 +25,31 @@ const timer = deadline => {
     const timer = getTimeRemaning();
 
     timerBlockDay.textContent = timer.day;
-    timerBlockHour.textContent = timer.hours;
-    timerBlockMin.textContent = timer.minutes;
-    timerBlockSec.textContent = timer.seconds;
+
+    if (timer.hours < 10) {
+      timerBlockHour.innerHTML = '0' + timer.hours;
+    } else {
+      timerBlockHour.textContent = timer.hours;
+    }
+
+    if (timer.minutes < 10) {
+      timerBlockMin.innerHTML = '0' + timer.minutes;
+    } else {
+      timerBlockMin.textContent = timer.minutes;
+    }
+
+    if (timer.seconds < 10) {
+      timerBlockSec.innerHTML = '0' + timer.seconds;
+    } else {
+      timerBlockSec.textContent = timer.seconds;
+    }
 
     const interbalId = setTimeout(start, 1000);
 
     if (timer.timeRemaning <= 0) {
       clearTimeout(interbalId);
-      timerBlockHour.textContent = '00';
+      timerBlockDay.textContent = '0';
+      timerBlockHour.textContent = '0';
       timerBlockMin.textContent = '00';
       timerBlockSec.textContent = '00';
     }
