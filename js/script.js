@@ -1,8 +1,56 @@
 'use strict';
 
+const arrWords = [
+  ['день', 'дня', 'дней'],
+  ['час', 'часа', 'часов'],
+  ['минута', 'минуты', 'минут'],
+  ['секунда', 'секунды', 'секунд'],
+];
+
+const createTimer = () => {
+  const timerCounter = document.createElement('div');
+  timerCounter.classList.add('timer__counter');
+
+  const timerDays = document.createElement('p');
+  timerDays.classList.add('timer__days');
+
+  const timerHours = document.createElement('p');
+  timerHours.classList.add('timer__hours');
+
+  const timerMinutes = document.createElement('p');
+  timerMinutes.classList.add('timer__minutes');
+
+  const timerSeconds = document.createElement('p');
+  timerSeconds.classList.add('timer__seconds');
+
+  const contentDays = document.createElement('span');
+  contentDays.classList.add('timer__number', 'timer__number_day');
+
+  const contentHours = document.createElement('span');
+  contentHours.classList.add('timer__number', 'timer__number_hour');
+
+  const contentMinutes = document.createElement('span');
+  contentMinutes.classList.add('timer__number', 'timer__number_min');
+
+  const contentSeconds = document.createElement('span');
+  contentSeconds.classList.add('timer__number', 'timer__number_sec');
+
+  timerDays.append(contentDays);
+  timerHours.append(contentHours);
+  timerMinutes.append(contentMinutes);
+  timerSeconds.append(contentSeconds);
+
+  timerCounter.append(timerDays, timerHours, timerMinutes, contentSeconds);
+
+  return timerCounter;
+};
+
+
 const declensionNum = (num, words) => {
-  return words[(num % 100 > 4 && num % 100 < 20) ?
+  const word = words[(num % 100 > 4 && num % 100 < 20) ?
     2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+
+  return `${num} ${word}`;
 };
 
 const timer = deadline => {
@@ -29,24 +77,24 @@ const timer = deadline => {
   const start = () => {
     const timer = getTimeRemaning();
 
-    timerBlockDay.textContent = timer.day + declensionNum(timer.day, ['день', 'дня', 'дней']);
+    timerBlockDay.textContent = declensionNum(timer.day, arrWords[0]);
 
     if (timer.hours < 10) {
-      timerBlockHour.innerHTML = '0' + timer.hours + declensionNum(timer.hours, ['час', 'часа', 'часов']);
+      timerBlockHour.textContent = '0' + declensionNum(timer.hours, arrWords[1]);
     } else {
-      timerBlockHour.textContent = timer.hours + declensionNum(timer.hours, ['час', 'часа', 'часов']);
+      timerBlockHour.textContent = declensionNum(timer.hours, arrWords[1]);
     }
 
     if (timer.minutes < 10) {
-      timerBlockMin.innerHTML = '0' + timer.minutes + declensionNum(timer.minutes, ['минута', 'минуты', 'минут']);
+      timerBlockMin.textContent = '0' + declensionNum(timer.minutes, arrWords[2]);
     } else {
-      timerBlockMin.textContent = timer.minutes + declensionNum(timer.minutes, ['минута', 'минуты', 'минут']);
+      timerBlockMin.textContent = declensionNum(timer.minutes, arrWords[2]);
     }
 
     if (timer.seconds < 10) {
-      timerBlockSec.innerHTML = '0' + timer.seconds + declensionNum(timer.seconds, ['секунда', 'секунды', 'секунд']);
+      timerBlockSec.textContent = '0' + declensionNum(timer.seconds, arrWords[3]);
     } else {
-      timerBlockSec.textContent = timer.seconds + declensionNum(timer.seconds, ['секунда', 'секунды', 'секунд']);
+      timerBlockSec.textContent = declensionNum(timer.seconds, arrWords[3]);
     }
 
     const interbalId = setTimeout(start, 1000);
@@ -58,16 +106,19 @@ const timer = deadline => {
       timerBlockMin.textContent = '00';
       timerBlockSec.textContent = '00';
     }
-
-    timer.remove();
   };
 
   start();
 };
 
-const timerElem = document.querySelector('.timer');
-const deadline = timerElem.dataset.deadline;
+const searchTimer = () => {
+  const timerElems = document.querySelectorAll('[data-timer-deadline]');
 
-console.log();
+  timerElems.forEach(elem => {
+    elem.append(createTimer());
+    const deadline = elem.dataset.timerDeadline;
+    timer(deadline);
+  });
+};
 
-timer(deadline);
+searchTimer();
