@@ -45,12 +45,19 @@ const createTimer = () => {
   return timerCounter;
 };
 
-
 const declensionNum = (num, words) => {
   const word = words[(num % 100 > 4 && num % 100 < 20) ?
     2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
 
   return `${num} ${word}`;
+};
+
+const digitNum = (num) => {
+  let result;
+
+  num < 10 ? result = '0' + num : result = num;
+
+  return result;
 };
 
 const timer = deadline => {
@@ -78,24 +85,9 @@ const timer = deadline => {
     const timer = getTimeRemaning();
 
     timerBlockDay.textContent = declensionNum(timer.day, arrWords[0]);
-
-    if (timer.hours < 10) {
-      timerBlockHour.textContent = '0' + declensionNum(timer.hours, arrWords[1]);
-    } else {
-      timerBlockHour.textContent = declensionNum(timer.hours, arrWords[1]);
-    }
-
-    if (timer.minutes < 10) {
-      timerBlockMin.textContent = '0' + declensionNum(timer.minutes, arrWords[2]);
-    } else {
-      timerBlockMin.textContent = declensionNum(timer.minutes, arrWords[2]);
-    }
-
-    if (timer.seconds < 10) {
-      timerBlockSec.textContent = '0' + declensionNum(timer.seconds, arrWords[3]);
-    } else {
-      timerBlockSec.textContent = declensionNum(timer.seconds, arrWords[3]);
-    }
+    timerBlockHour.textContent = declensionNum(digitNum(timer.hours), arrWords[1]);
+    timerBlockMin.textContent = declensionNum(digitNum(timer.minutes), arrWords[2]);
+    timerBlockSec.textContent = declensionNum(digitNum(timer.seconds), arrWords[3]);
 
     const interbalId = setTimeout(start, 1000);
 
