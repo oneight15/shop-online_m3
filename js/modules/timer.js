@@ -2,6 +2,10 @@ import * as fn from './functions.js';
 import arrWords from './consts.js';
 
 export const createTimer = () => {
+  const timerText = document.createElement('span');
+  timerText.classList.add('timer__text');
+  timerText.textContent = 'До конца акции:';
+
   const timerCounter = document.createElement('div');
   timerCounter.classList.add('timer__counter');
 
@@ -36,8 +40,13 @@ export const createTimer = () => {
 
   timerCounter.append(timerDays, timerHours, timerMinutes, contentSeconds);
 
-  return timerCounter;
+  const timerWrapper = document.createElement('div');
+  timerWrapper.append(timerText, timerCounter);
+
+  return timerWrapper;
 };
+
+export const timerElem = createTimer();
 
 export const renderTimer = deadline => {
   const timerBlockHour = document.querySelector('.timer__number_hour');
@@ -46,11 +55,10 @@ export const renderTimer = deadline => {
   const timerBlockDay = document.querySelector('.timer__number_day');
 
   const getTimeRemaning = () => {
+    const diffUTC = (new Date(deadline).getTimezoneOffset() + 180) * 60 * 1000;
     const dateStop = new Date(deadline).getTime();
-
     const dateNow = Date.now();
-
-    const timeRemaning = dateStop - dateNow;
+    const timeRemaning = dateStop - dateNow - diffUTC;
 
     const seconds = Math.floor(timeRemaning / 1000 % 60);
     const minutes = Math.floor(timeRemaning / 1000 / 60 % 60);
@@ -62,20 +70,21 @@ export const renderTimer = deadline => {
 
   const start = () => {
     const timer = getTimeRemaning();
-
-    timerBlockDay.textContent = fn.declensionNum(timer.day, arrWords[0]);
-    timerBlockHour.textContent = fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
-    timerBlockMin.textContent = fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
-    timerBlockSec.textContent = fn.declensionNum(fn.digitNum(timer.seconds), arrWords[3]);
-
     const interbalId = setTimeout(start, 1000);
+    const timestampOfDay = 24 * 60 * 60 * 1000;
 
     if (timer.timeRemaning <= 0) {
       clearTimeout(interbalId);
-      timerBlockDay.textContent = '0';
-      timerBlockHour.textContent = '0';
-      timerBlockMin.textContent = '00';
-      timerBlockSec.textContent = '00';
+      timerElem.remove();
+    } else if (timer.timeRemaning < timestampOfDay) {
+      timerBlockDay.remove();
+      timerBlockHour.textContent = fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
+      timerBlockMin.textContent = fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
+      timerBlockSec.textContent = fn.declensionNum(fn.digitNum(timer.seconds), arrWords[3]);
+    } else {
+      timerBlockDay.textContent = fn.declensionNum(timer.day, arrWords[0]);
+      timerBlockHour.textContent = fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
+      timerBlockMin.textContent = fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
     }
   };
 
