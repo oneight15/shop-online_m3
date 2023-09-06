@@ -5,10 +5,4 @@ export const declensionNum = (num, words) => {
   return `${num} ${word}`;
 };
 
-export const digitNum = (num) => {
-  let result;
-
-  num < 10 ? result = '0' + num : result = num;
-
-  return result;
-};
+export const digitNum = (num) => `0${num}`.slice(-2);
