@@ -1,0 +1,33 @@
+.blog {
+  color: #2D2D2D;
+}
+
+.blog__container {
+  padding: 80px 243px 147px;
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 143px;
+}
+
+.blog__card {
+  display: flex;
+  gap: 30px;
+}
+
+.card__image {
+  max-width: 195px;
+  height: 195px;
+  flex-shrink: 0;
+  background-color: greenyellow;
+  border-radius: 20px;
+}
+
+.card__title {
+  max-width: 420px;
+  padding-top: 13px;
+  font-size: 38px;
+  font-weight: 700;
+}
