@@ -1,9 +1,13 @@
 .blog {
   color: #2D2D2D;
+  padding-top: 80px;
+  padding-bottom: 147px;
 }
 
 .blog__container {
-  padding: 80px 243px 147px;
+  max-width: 1473px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .blog__list {
