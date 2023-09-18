@@ -21,7 +21,9 @@ const renderPosts = async () => {
     card.classList.add('blog__card', 'card');
     card.innerHTML = `
       <img src="https://loremflickr.com/400/400?${index}" alt="Изображение карточки" class="card__image">
-      <h2 class="card__title">${item.title}</h2>
+      <h2 class="card__title" data-id=${item.id}>
+        <a class="card__link" href="article.html">${item.title}</a>
+      </h2>
     `;
 
     return card;
@@ -32,4 +34,4 @@ const renderPosts = async () => {
   blogElement.append(cardsWrapper);
 };
 
-renderPosts();
+export default renderPosts;
