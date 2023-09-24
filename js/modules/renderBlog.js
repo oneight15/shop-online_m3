@@ -28,7 +28,7 @@ const renderPosts = async () => {
 
   blogList.append(...posts);
   cardsWrapper.append(blogList);
-  consts.blogElement.append(cardsWrapper);
+  consts.blogElement.prepend(cardsWrapper);
 };
 
 export default renderPosts;
