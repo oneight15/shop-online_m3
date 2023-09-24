@@ -78,13 +78,19 @@ export const renderTimer = deadline => {
       timerElem.remove();
     } else if (timer.timeRemaning < timestampOfDay) {
       timerBlockDay.remove();
-      timerBlockHour.textContent = fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
-      timerBlockMin.textContent = fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
-      timerBlockSec.textContent = fn.declensionNum(fn.digitNum(timer.seconds), arrWords[3]);
+      timerBlockHour.textContent =
+        fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
+      timerBlockMin.textContent =
+        fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
+      timerBlockSec.textContent =
+        fn.declensionNum(fn.digitNum(timer.seconds), arrWords[3]);
     } else {
-      timerBlockDay.textContent = fn.declensionNum(timer.day, arrWords[0]);
-      timerBlockHour.textContent = fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
-      timerBlockMin.textContent = fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
+      timerBlockDay.textContent =
+        fn.declensionNum(timer.day, arrWords[0]);
+      timerBlockHour.textContent =
+        fn.declensionNum(fn.digitNum(timer.hours), arrWords[1]);
+      timerBlockMin.textContent =
+        fn.declensionNum(fn.digitNum(timer.minutes), arrWords[2]);
     }
   };
 

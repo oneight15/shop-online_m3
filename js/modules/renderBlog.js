@@ -1,4 +1,5 @@
-const blogElement = document.querySelector('.blog');
+import * as consts from './consts.js';
+import * as create from './createElements.js';
 
 const loadPosts = async (cb) => {
   const res = await fetch('https://gorest.co.in/public-api/posts');
@@ -9,12 +10,8 @@ const loadPosts = async (cb) => {
 
 const renderPosts = async () => {
   const data = await loadPosts();
-
-  const cardsWrapper = document.createElement('div');
-  cardsWrapper.classList.add('blog__container');
-
-  const blogList = document.createElement('ul');
-  blogList.classList.add('blog__list');
+  const cardsWrapper = create.createCardsWrapper();
+  const blogList = create.createBlogLis();
 
   const posts = data.data.map((item, index) => {
     const card = document.createElement('li');
@@ -31,7 +28,7 @@ const renderPosts = async () => {
 
   blogList.append(...posts);
   cardsWrapper.append(blogList);
-  blogElement.append(cardsWrapper);
+  consts.blogElement.append(cardsWrapper);
 };
 
 export default renderPosts;
