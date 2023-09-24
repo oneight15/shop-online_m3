@@ -1,3 +1,5 @@
+import * as fn from './functions.js';
+
 export const createCardsWrapper = () => {
   const cardsWrapper = document.createElement('div');
   cardsWrapper.classList.add('blog__container');
@@ -5,7 +7,7 @@ export const createCardsWrapper = () => {
   return cardsWrapper;
 };
 
-export const createBlogLis = () => {
+export const createBlogList = () => {
   const blogList = document.createElement('ul');
   blogList.classList.add('blog__list');
 
@@ -80,3 +82,20 @@ export const createArticleWrapper = () => {
   return articleWrapper;
 };
 
+export const createPaginationElem = () => {
+  const paginationElem = document.createElement('div');
+  paginationElem.classList.add('pagination');
+
+  const paginationList = fn.createList(3, 'pagination__item');
+  paginationList.classList.add('pagination__list');
+
+  const paginationBtnLeft = document.createElement('button');
+  paginationBtnLeft.classList.add('pagination__btn', 'pagination__btn_left');
+
+  const paginationBtnRight = document.createElement('button');
+  paginationBtnRight.classList.add('pagination__btn', 'pagination__btn_right');
+
+  paginationElem.append(paginationList, paginationBtnLeft, paginationBtnRight);
+
+  return paginationElem;
+};

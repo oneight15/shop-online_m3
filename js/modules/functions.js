@@ -6,3 +6,18 @@ export const declensionNum = (num, words) => {
 };
 
 export const digitNum = (num) => `0${num}`.slice(-2);
+
+export const createList = (numItem, classItem) => {
+  const paginationList = document.createElement('ul');
+
+  for (let i = 0; i < numItem; i++) {
+    const paginationItem = document.createElement('li');
+    paginationItem.classList.add(classItem);
+    paginationItem.textContent = i + 1;
+
+    paginationList.append(paginationItem);
+  }
+
+  return paginationList;
+};
+

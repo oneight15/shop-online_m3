@@ -11,7 +11,8 @@ const loadPosts = async (cb) => {
 const renderPosts = async () => {
   const data = await loadPosts();
   const cardsWrapper = create.createCardsWrapper();
-  const blogList = create.createBlogLis();
+  const blogList = create.createBlogList();
+  const paginationElem = create.createPaginationElem();
 
   const posts = data.data.map((item, index) => {
     const card = document.createElement('li');
@@ -28,7 +29,7 @@ const renderPosts = async () => {
 
   blogList.append(...posts);
   cardsWrapper.append(blogList);
-  consts.blogElement.prepend(cardsWrapper);
+  consts.blogElement.append(cardsWrapper, paginationElem);
 };
 
 export default renderPosts;
